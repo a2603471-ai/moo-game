@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* 像素風格字型 */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+/* 全域重設，讓網頁填滿 iPhone 螢幕 */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #1a1a2e;
+}
+
+/* 楓之谷風格對話框：銀框白底，仿原版 NPC 對話視窗 */
+.dialog-box {
+  background: linear-gradient(180deg, #F6F6FF 0%, #E8E8F4 100%);
+  border: 2px solid #6868A0;
+  box-shadow:
+    inset 2px 2px 0 rgba(255,255,255,0.95),
+    inset -2px -2px 0 rgba(60,60,100,0.18),
+    0 4px 12px rgba(0,0,0,0.45);
+}
+
+/* 像素風格按鈕 */
+.pixel-btn {
+  border: 2px solid #fff;
+  box-shadow: 2px 2px 0 #888, inset 0 0 0 1px rgba(255,255,255,0.2);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.pixel-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #888;
+}
+
+/* 防止 iOS 橡皮筋滾動 */
+body {
+  overscroll-behavior: none;
+}

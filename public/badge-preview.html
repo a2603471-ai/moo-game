@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>稱號預覽</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(180deg, #7ec8a0 0%, #5aaa78 100%);
+    font-family: 'Noto Sans TC', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 40px;
+    min-height: 100vh;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .label {
+    font-size: 12px;
+    color: #3a2000;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  /* 參考：原本名字框 */
+  .name-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.85);
+    color: #e8607e;
+    border: 1.5px solid #ffb6c8;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 1px 4px rgba(232,96,126,0.2);
+    white-space: nowrap;
+  }
+
+  /* D: 粉金膠囊（同形狀，換金色系） */
+  .badge-d {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(255,248,220,0.92);
+    color: #8B5A00;
+    border: 1.5px solid #C8903A;
+    font-size: 11px;
+    font-weight: bold;
+    box-shadow: 0 1px 4px rgba(180,120,0,0.25), inset 0 1px 0 rgba(255,255,255,0.7);
+    white-space: nowrap;
+  }
+
+  /* E: 楓之谷粉金融合（方框＋圓角＋粉金漸層） */
+  .badge-e {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #fff0f5 0%, #ffe8d0 100%);
+    border: 2px solid #C8903A;
+    font-size: 11px;
+    font-weight: bold;
+    color: #8B3A50;
+    box-shadow: 2px 2px 0 #C8903A, inset 0 1px 0 rgba(255,255,255,0.9);
+    white-space: nowrap;
+  }
+
+  /* F: 名字框同款＋楓之谷雙層邊框 */
+  .badge-f-outer {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 2px;
+    background: linear-gradient(180deg, #D4A853, #9A7540);
+    box-shadow: 0 2px 6px rgba(100,60,0,0.3);
+  }
+  .badge-f-inner {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: rgba(255,248,235,0.45);
+    font-size: 11px;
+    font-weight: bold;
+    color: #7A3A00;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+  <div class="item">
+    <div class="label">D｜粉金膠囊</div>
+    <div class="name-tag">寶寶 💕</div>
+    <div class="badge-d">🎊 四週年快樂 🎊</div>
+  </div>
+
+  <div class="item">
+    <div class="label">F｜名字框＋楓之谷金邊</div>
+    <div class="name-tag">寶寶 💕</div>
+    <div class="badge-f-outer">
+      <div class="badge-f-inner">🎊 四週年快樂 🎊</div>
+    </div>
+  </div>
+
+</body>
+</html>
