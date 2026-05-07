@@ -25,7 +25,7 @@ export default function NPC({ state = 'idle', animated = true, labelStyle = {}, 
         {/* 待機圖（idle 時顯示） */}
         {state === 'idle' && (
           <motion.img
-            src="/char_new.png"
+            src={import.meta.env.BASE_URL + 'char_new.png'}
             alt="肉呆"
             style={{ width: 160 }}
             animate={animated ? idleAnim : {}}
@@ -36,7 +36,7 @@ export default function NPC({ state = 'idle', animated = true, labelStyle = {}, 
         {/* 旋轉 APNG（結局畫面專用） */}
         {state === 'spin' && (
           <img
-            src="/spin_idle.apng"
+            src={import.meta.env.BASE_URL + 'spin_idle.apng'}
             alt="肉呆旋轉"
             style={{ width: 160 }}
             draggable={false}
@@ -46,7 +46,7 @@ export default function NPC({ state = 'idle', animated = true, labelStyle = {}, 
         {/* 答錯 APNG 動態貼圖（shake 時掛載） */}
         {state === 'shake' && (
           <img
-            src="/shake_ya.apng"
+            src={import.meta.env.BASE_URL + 'shake_ya.apng'}
             alt="答錯"
             style={{ width: 160 }}
             draggable={false}
@@ -56,7 +56,7 @@ export default function NPC({ state = 'idle', animated = true, labelStyle = {}, 
         {/* 答對 APNG 動態貼圖（jump 時掛載，自動播放，RGBA 透明） */}
         {state === 'jump' && (
           <img
-            src="/jump_ya.apng"
+            src={import.meta.env.BASE_URL + 'jump_ya.apng'}
             alt="YA~"
             style={{ width: 180 }}
             draggable={false}
@@ -66,7 +66,7 @@ export default function NPC({ state = 'idle', animated = true, labelStyle = {}, 
         {/* 未全對結果頁動態貼圖 */}
         {state === 'lose' && (
           <img
-            src="/npc_lose.apng"
+            src={import.meta.env.BASE_URL + 'npc_lose.apng'}
             alt="未全對"
             style={{ width: 170 }}
             draggable={false}
@@ -76,7 +76,7 @@ export default function NPC({ state = 'idle', animated = true, labelStyle = {}, 
         {/* 全對結果頁動態貼圖 */}
         {state === 'win' && (
           <img
-            src="/npc_win.apng"
+            src={import.meta.env.BASE_URL + 'npc_win.apng'}
             alt="全對！"
             style={{ width: 180 }}
             draggable={false}

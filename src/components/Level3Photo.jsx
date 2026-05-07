@@ -16,9 +16,9 @@ const QUESTIONS = [
     text: '我們第一次約會的甜點？',
     answerIdx: 0,
     options: [
-      { src: '/photos/甜點A.jpg', label: '甜點 A', bg: '#fde68a' },
-      { src: '/photos/甜點B.jpg', label: '甜點 B', bg: '#fbcfe8' },
-      { src: '/photos/甜點C.jpg', label: '甜點 C', bg: '#a5f3fc' },
+      { src: import.meta.env.BASE_URL + 'photos/甜點A.jpg', label: '甜點 A', bg: '#fde68a' },
+      { src: import.meta.env.BASE_URL + 'photos/甜點B.jpg', label: '甜點 B', bg: '#fbcfe8' },
+      { src: import.meta.env.BASE_URL + 'photos/甜點C.jpg', label: '甜點 C', bg: '#a5f3fc' },
     ],
   },
   {
@@ -26,9 +26,9 @@ const QUESTIONS = [
     text: '我們的第一場演唱會？',
     answerIdx: 2,
     options: [
-      { src: '/photos/演唱會A.jpg', label: '演唱會 A', bg: '#c4b5fd' },
-      { src: '/photos/演唱會B.jpg', label: '演唱會 B', bg: '#bbf7d0' },
-      { src: '/photos/演唱會C.jpg', label: '演唱會 C', bg: '#fca5a5' },
+      { src: import.meta.env.BASE_URL + 'photos/演唱會A.jpg', label: '演唱會 A', bg: '#c4b5fd' },
+      { src: import.meta.env.BASE_URL + 'photos/演唱會B.jpg', label: '演唱會 B', bg: '#bbf7d0' },
+      { src: import.meta.env.BASE_URL + 'photos/演唱會C.jpg', label: '演唱會 C', bg: '#fca5a5' },
     ],
   },
   {
@@ -36,9 +36,9 @@ const QUESTIONS = [
     text: '我們第一次去的國家？',
     answerIdx: 2,
     options: [
-      { src: '/photos/國家A.jpg', label: '國家 A', bg: '#fed7aa' },
-      { src: '/photos/國家B.jpg', label: '國家 B', bg: '#a5f3fc' },
-      { src: '/photos/國家C.jpg', label: '國家 C', bg: '#d9f99d' },
+      { src: import.meta.env.BASE_URL + 'photos/國家A.jpg', label: '國家 A', bg: '#fed7aa' },
+      { src: import.meta.env.BASE_URL + 'photos/國家B.jpg', label: '國家 B', bg: '#a5f3fc' },
+      { src: import.meta.env.BASE_URL + 'photos/國家C.jpg', label: '國家 C', bg: '#d9f99d' },
     ],
   },
 ]

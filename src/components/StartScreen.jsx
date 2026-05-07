@@ -33,7 +33,7 @@ export default function StartScreen({ onStart }) {
     <div
       className="w-full h-full relative overflow-hidden"
       style={{
-        backgroundImage: "url('/bg-select-clean.jpeg')",
+        backgroundImage: `url('${import.meta.env.BASE_URL}bg-select-clean.jpeg')`,
         backgroundSize: 'cover',
         backgroundPosition: '65% center',
       }}

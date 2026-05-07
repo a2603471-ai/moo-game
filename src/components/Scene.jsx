@@ -6,7 +6,7 @@ export default function Scene({ children }) {
       className="relative w-full h-full"
       style={{
         overflow: 'visible',
-        backgroundImage: "url('/bg.jpeg?v=2')",
+        backgroundImage: `url('${import.meta.env.BASE_URL}bg.jpeg?v=2')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center 70%',
         backgroundRepeat: 'no-repeat',
