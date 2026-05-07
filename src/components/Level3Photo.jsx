@@ -149,13 +149,15 @@ export default function Level3Photo({ onComplete }) {
     }
 
     setTimeout(() => {
-      setNpcState('idle')
       setFeedbackIdx(null)
       setFeedbackType(null)
       setAnswered(false)
       if (qIdx < QUESTIONS.length - 1) {
+        setNpcState('idle')
         setQIdx(i => i + 1)
       } else {
+        const finalScore = correct ? score + 1 : score
+        setNpcState(finalScore === QUESTIONS.length ? 'win' : 'lose')
         setPhase('result')
       }
     }, correct ? 1500 : 1000)
@@ -258,14 +260,14 @@ export default function Level3Photo({ onComplete }) {
           transition={{ type: 'spring', stiffness: 200 }}
           className="px-6 py-4 w-full text-center"
         >
-          <p className="text-4xl mb-2">{perfect ? '🎉' : '💝'}</p>
+          <p className="text-4xl mb-2">{perfect ? '😆' : '😗'}</p>
           <p className="text-xl font-bold mb-1"
             style={{ fontFamily: "'Noto Sans TC', sans-serif", color: '#B07000' }}>
-            {perfect ? '完美通關！' : `答對 ${score} / ${QUESTIONS.length}`}
+            {perfect ? '記憶試煉：完美通過！' : '沒事沒事～'}
           </p>
           <p className="text-sm mb-5"
             style={{ fontFamily: "'Noto Sans TC', sans-serif", color: '#8B6010' }}>
-            {perfect ? '你把我們的回憶都記得呢 ❤️' : '沒關係，這些畫面都是我們的 💕'}
+            {perfect ? '最終獎勵正在前方等你' : '最後一關必定有獎，去轉扭蛋吧！'}
           </p>
           <motion.button
             className="pixel-btn px-8 py-3 rounded-lg font-bold text-base"

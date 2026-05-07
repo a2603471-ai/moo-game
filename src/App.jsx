@@ -58,7 +58,7 @@ export default function App() {
           <motion.div key="level4" className="w-full h-full"
             variants={pageVariants} initial="initial" animate="animate" exit="exit"
             transition={{ duration: 0.4 }}>
-            <Level4Gacha onComplete={() => {}} />
+            <Level4Gacha onComplete={() => setLevel(0)} />
           </motion.div>
         )}
       </AnimatePresence>

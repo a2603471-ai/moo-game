@@ -63,6 +63,26 @@ export default function NPC({ state = 'idle', animated = true, labelStyle = {}, 
           />
         )}
 
+        {/* 未全對結果頁動態貼圖 */}
+        {state === 'lose' && (
+          <img
+            src="/npc_lose.apng"
+            alt="未全對"
+            style={{ width: 170 }}
+            draggable={false}
+          />
+        )}
+
+        {/* 全對結果頁動態貼圖 */}
+        {state === 'win' && (
+          <img
+            src="/npc_win.apng"
+            alt="全對！"
+            style={{ width: 180 }}
+            draggable={false}
+          />
+        )}
+
         {/* 名稱標籤 */}
         <div
           className="mt-1 px-3 py-0.5 rounded-full text-xs font-bold"

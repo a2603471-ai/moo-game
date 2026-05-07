@@ -15,11 +15,11 @@ const PRIZES = [
     img: '/一番賞圖片/瞬移石.png',
     imgStyle: { objectFit: 'contain', transform: 'scale(1.3) translateX(-1px)', transformOrigin: 'center' },
     sealColor: '#f4a0b5', ticketStripe: '#ec4899', ticketDark: '#831843' },
-  { id: 'B', rank: 'B 賞', name: '神秘背包', name2: '購物車清空特權', name3: '（最多五家店家😂）', emoji: '',
-    img: '/一番賞圖片/神秘背包.png',
-    sealColor: '#a5b4fc', ticketStripe: '#6366f1', ticketDark: '#3730a3' },
-  { id: 'C', rank: 'C 賞', name: '護身符', name2: '體力恢復券', name3: '可兌換餐廳大餐或按摩', emoji: '',
+  { id: 'B', rank: 'B 賞', name: '護身符', name2: '體力恢復券', name3: '高級按摩全額補助', emoji: '',
     img: '/一番賞圖片/護身符.png',
+    sealColor: '#a5b4fc', ticketStripe: '#6366f1', ticketDark: '#3730a3' },
+  { id: 'C', rank: 'C 賞', name: '神秘背包', name2: '購物車清空特權', name3: '（最多五家店家😂）', emoji: '',
+    img: '/一番賞圖片/神秘背包.png',
     sealColor: '#6ee7b7', ticketStripe: '#10b981', ticketDark: '#065f46' },
 ]
 

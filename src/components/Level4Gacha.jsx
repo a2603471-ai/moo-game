@@ -415,9 +415,21 @@ export default function Level4Gacha({ onComplete }) {
             <div style={{ fontSize: 17, color: '#5C3A00', lineHeight: 1.7, marginBottom: 12, whiteSpace: 'pre-line' }}>
               {PRIZE.message}
             </div>
-            <div style={{ fontSize: 16, color: '#8B6010' }}>
+            <div style={{ fontSize: 16, color: '#8B6010', marginBottom: 20 }}>
               {PRIZE.footer}
             </div>
+            <button
+              onClick={onComplete}
+              style={{
+                background: 'rgba(255,248,230,0.95)', color: '#3A1F00',
+                border: '2px solid #9A7540', borderRadius: 10, padding: '8px 24px',
+                fontSize: 14, fontWeight: 'bold', cursor: 'pointer',
+                fontFamily: "'Noto Sans TC', sans-serif",
+                boxShadow: '2px 2px 0 #9A7540, inset 0 1px 0 rgba(255,255,255,0.85)',
+              }}
+            >
+              🔄 再玩一次
+            </button>
           </div>
         </div>
       )}

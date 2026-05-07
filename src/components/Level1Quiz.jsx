@@ -55,12 +55,14 @@ export default function Level1Quiz({ onComplete }) {
 
     // 答對 jump 停留 3 秒；答錯 shake 停留 0.9 秒
     setTimeout(() => {
-      setNpcState('idle')
       setFeedback(null)
       setAnswered(false)
       if (qIdx < QUESTIONS.length - 1) {
+        setNpcState('idle')
         setQIdx(i => i + 1)
       } else {
+        const finalScore = correct ? score + 1 : score
+        setNpcState(finalScore === QUESTIONS.length ? 'win' : 'lose')
         setPhase('result')
       }
     }, correct ? 1500 : 900)
@@ -167,14 +169,14 @@ export default function Level1Quiz({ onComplete }) {
           transition={{ type: 'spring', stiffness: 200 }}
           className="px-6 py-4 w-full text-center"
         >
-          <p className="text-4xl mb-2">{perfect ? '🎉' : '💝'}</p>
+          <p className="text-4xl mb-2">{perfect ? '🫨' : '🙂'}</p>
           <p className="text-xl font-bold mb-1"
             style={{ fontFamily: "'Noto Sans TC', sans-serif", color: '#B07000' }}>
-            {perfect ? '完美通關！' : `答對 ${score} / ${QUESTIONS.length}`}
+            {perfect ? '哇全對？！' : `好喔～`}
           </p>
           <p className="text-sm mb-5"
             style={{ fontFamily: "'Noto Sans TC', sans-serif", color: '#8B6010' }}>
-            {perfect ? '你真的很記得我們的事呢 ❤️' : '沒關係，這些回憶都是我們的 💕'}
+            {perfect ? '這時候記憶特別好呢 🤣' : <>果然還得是你😂<br />沒關係我替你記著</>}
           </p>
           <motion.button
             className="pixel-btn px-8 py-3 rounded-lg font-bold text-base"
