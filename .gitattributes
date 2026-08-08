@@ -1,0 +1,24 @@
+# 換行統一規則
+#
+# 為什麼要有這個檔：Windows 與 Mac 對「換行」的存法不同（Windows 每行結尾多一個
+# 看不見的 \r）。沒有這個檔的話，同一份檔案在兩台機器之間來回，git 會整份判定
+# 為「已修改」，但內容其實一個字都沒差——真正的改動會被這些假異動淹沒。
+#
+# 怎麼分辨假異動：git status 說有改、但 git diff 看不到任何差異，就是這種。
+#
+# text=auto 讓 git 自己判斷哪些是文字檔（看內容有沒有二進位位元組），
+# 所以圖片、影片不會被誤當文字處理。
+
+* text=auto eol=lf
+
+# pre-commit 是金鑰掃描的 hook，沒有副檔名，必須是 LF，
+# 否則 shebang 後面多一個 \r，Mac 上每一次 commit 都會失敗。
+.githooks/*  text eol=lf
+
+# 這個 repo 有一批比較少見的影音格式。text=auto 靠內容判斷通常抓得到，
+# 但明確標成 binary 更保險——一旦被誤當文字做換行轉換，檔案會直接壞掉。
+*.heic  binary
+*.apng  binary
+*.mov   binary
+*.mp4   binary
+*.webm  binary
