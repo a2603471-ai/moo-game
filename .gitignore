@@ -7,3 +7,8 @@ dist/
 .env
 .env.*
 !.env.example
+
+# 本機設定與原始照片，不進版控（2026-10-29：原始照片含 GPS 定位）
+.claude/
+public/photos_backup/
+第三關題目/
