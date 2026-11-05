@@ -1,7 +1,7 @@
-@import "tailwindcss";
-
-/* 像素風格字型 */
+/* 像素風格字型：外部 @import 必須放在最上面，排在 tailwindcss 後面會在建置時被丟掉 */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+@import "tailwindcss";
 
 /* 全域重設，讓網頁填滿 iPhone 螢幕 */
 * {
