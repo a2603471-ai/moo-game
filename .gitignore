@@ -12,3 +12,7 @@ dist/
 .claude/
 public/photos_backup/
 第三關題目/
+
+# 開發筆記只留本機，不公開（2026-11-05：內容有私人細節與本機路徑）
+PROGRESS.md
+PROJECT_STATUS.md
